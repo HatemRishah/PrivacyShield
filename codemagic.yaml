@@ -7,8 +7,9 @@ workflows:
     scripts:
       - name: Build Debug APK
         script: |
+          cd PrivacyShield
           gradle wrapper
           chmod +x gradlew
           ./gradlew assembleDebug
     artifacts:
-      - app/build/outputs/apk/debug/app-debug.apk
+      - PrivacyShield/app/build/outputs/apk/debug/app-debug.apk
