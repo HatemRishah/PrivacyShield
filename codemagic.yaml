@@ -9,6 +9,9 @@ workflows:
         script: |
           unzip PrivacyShield_v2.zip
           cd PrivacyShield
+          echo "android.useAndroidX=true" >> gradle.properties
+          echo "android.enableJetifier=true" >> gradle.properties
+          echo "org.gradle.jvmargs=-Xmx2048m" >> gradle.properties
           gradle wrapper
           chmod +x gradlew
           ./gradlew assembleDebug
