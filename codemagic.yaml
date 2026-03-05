@@ -5,8 +5,9 @@ workflows:
     environment:
       java: 17
     scripts:
-      - name: Build Debug APK
+      - name: Unzip and Build
         script: |
+          unzip PrivacyShield.zip
           cd PrivacyShield
           gradle wrapper
           chmod +x gradlew
